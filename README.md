@@ -3,6 +3,6 @@ The motivation behind this "app" is to demonstrate the ability to mint an NFT in
 - Source Minter on Arbitrum
 - Destination Minter on Base
 
-A short [demo video]() demonstrates the entire process.
+A short [demo video](https://youtu.be/zOTLn5zl09s) demonstrates the entire process.
 
 To try it yourself, clone this repo and run the script `minting.sh`. It might ask you to give it execution permissions `chmod a+x minting.sh`
