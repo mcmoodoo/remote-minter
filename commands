@@ -1,0 +1,16 @@
+forge script ./script/Faucet.s.sol -vvvv --broadcast --rpc-url arbitrumSepolia --sig "run(uint8)" --
+
+cast wallet address --account rashid-test-wallet
+
+
+forge script ./script/Example02.s.sol:DeployBasicMessageReceiver -vvvv --broadcast --rpc-url baseGoerli --sig "run(uint8)" -- 6
+
+##### BasicMessageReceiver contract deployed on base-sepolia
+✅  [Success]Hash: 0xe2a5624a06dac07497bab879bb1d3849757605228de2aebd42b7f3669cd88f86
+Contract Address: 0xFc740263b97Da219c091D6e50A5d6e3fd9b90B2c
+Block: 12562368
+Paid: 0.00000099177875174 ETH (991516 gas * 0.001000265 gwei)
+
+
+## Trying to Send from source to destination
+forge script ./script/Example02.s.sol:CCIPTokenTransfer -vvv --broadcast --rpc-url arbitrumSepolia --sig "run(uint8,uint8,address,address,uint256,uint8)" -- 2 6 0xFc740263b97Da219c091D6e50A5d6e3fd9b90B2c 0xD21341536c5cF5EB1bcb58f6723cE26e8D8E90e4 10 0
